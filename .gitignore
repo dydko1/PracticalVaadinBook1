@@ -1,2 +1,6 @@
 /PracticalVaadinBook1.iml
 /.idea
+/target
+/node_modules
+/package.json
+/webpack.generated.js
