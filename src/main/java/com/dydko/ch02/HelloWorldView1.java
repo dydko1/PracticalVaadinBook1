@@ -5,8 +5,8 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("hello-world1")
-public class HelloWorldView extends VerticalLayout {
-    public HelloWorldView() {
+public class HelloWorldView1 extends VerticalLayout {
+    public HelloWorldView1() {
         add(new Paragraph("Witaj Mirosław!!!"));
     }
 }
