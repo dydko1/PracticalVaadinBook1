@@ -29,9 +29,11 @@ public class PaddingMarginSpacingView extends Composite<Component> {
                 new Button("Spacing", e -> layout.setSpacing(!layout.isSpacing())),
                 button1,
                 button2,
-                new Button("I'm 1 in%", e->layout.setWidth("5px"))
+                new Button("I'm 5 in%", e -> layout.setWidth("5px")),
+                new Button("I'm 50 in%", e -> layout.setWidth("50px"))
 
         );
+        layout.setWidthFull();
         return layout;
     }
 }
