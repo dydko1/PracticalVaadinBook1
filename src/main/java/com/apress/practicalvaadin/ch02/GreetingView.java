@@ -5,7 +5,7 @@ import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
-@Route("greeting")
+@Route("ch01/greeting")
 public class GreetingView extends VerticalLayout {
 
   public GreetingView() {

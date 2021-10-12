@@ -6,7 +6,7 @@ import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.Route;
 
-@Route("horizontal-layout1")
+@Route("ch03/horizontal-layout1")
 public class HorizontalLayoutView1 extends HorizontalLayout {
     public HorizontalLayoutView1(){
         add(new Paragraph("Paragraph 1"),

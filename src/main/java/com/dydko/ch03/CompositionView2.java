@@ -7,7 +7,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
-@Route("composition2")
+@Route("ch03/composition2")
 public class CompositionView2 extends Composite<VerticalLayout> {
     public CompositionView2() {
         HorizontalLayout toolbar = new HorizontalLayout(

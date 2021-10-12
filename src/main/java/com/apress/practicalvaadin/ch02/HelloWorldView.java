@@ -4,7 +4,7 @@ import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
-@Route("hello-world")
+@Route("ch01/hello-world")
 public class HelloWorldView extends VerticalLayout {
 
   public HelloWorldView() {

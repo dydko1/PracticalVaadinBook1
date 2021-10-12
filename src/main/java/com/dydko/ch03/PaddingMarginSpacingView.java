@@ -8,7 +8,7 @@ import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.Route;
 
-@Route("padding-margin-spacing")
+@Route("ch03/padding-margin-spacing")
 public class PaddingMarginSpacingView extends Composite<Component> {
     @Override
     protected Component initContent() {

@@ -6,7 +6,7 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.orderedlayout.FlexLayout;
 import com.vaadin.flow.router.Route;
 
-@Route("flex-wrap")
+@Route("ch03/flex-wrap")
 public class FlexDiretion1 extends Composite<Component> {
     protected Component initContent() {
         FlexLayout layout = new FlexLayout();

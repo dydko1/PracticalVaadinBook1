@@ -4,7 +4,9 @@ import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.router.Route;
 
+@Route("ch03/toolbar")
 public class Toolbar1 extends Composite<Component> {
     @Override
     protected Component initContent() {
