@@ -1,4 +1,4 @@
-package com.dydko.ch05.manualBinging1;
+package com.dydko.ch05.autoBinding;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Composite;
@@ -14,8 +14,8 @@ import com.vaadin.flow.router.Route;
 import java.util.HashSet;
 import java.util.Set;
 
-@Route("ch05/product-management1")
-public class manualBinding1 extends Composite<Component> {
+@Route("ch05/autobinding")
+public class ProductManagementView2 extends Composite<Component> {
 
     private static Set<Product> products = new HashSet<>();
     private static Set<Manufacturer> manufacturers = new HashSet<>();
@@ -55,7 +55,8 @@ public class manualBinding1 extends Composite<Component> {
         dialog.setModal(true);
         dialog.open();
 
-        dialog.add(new ProductForm(product, manufacturers, () -> {
+        dialog.add(new AutoBindingProductForm(product, manufacturers, () -> {
+            //ProductForm(product, manufacturers, () -> {
             dialog.close();
             save(product);
         }));
