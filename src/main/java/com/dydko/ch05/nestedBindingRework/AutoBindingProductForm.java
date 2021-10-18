@@ -19,22 +19,38 @@ public class AutoBindingProductForm extends Composite<Component> {
     private final SerializableRunnable saveListener;
 
     @PropertyId("name")
-    private TextField nameTextField = new TextField("Name");
+    private TextField name = new TextField("Name");
 
     @PropertyId("manufacturer")
-    private ComboBox<Manufacturer> manufacturerComboBox = new ComboBox<>();
+    private ComboBox<Manufacturer> manufacturer = new ComboBox<>();
 
     @PropertyId("available")
-    private Checkbox availableCheckbox = new Checkbox("Available");
+    private Checkbox available = new Checkbox("Available");
+
+    private TextField phoneNumber = new TextField("Manufacturer phone number");
+
+    private TextField email = new TextField("Manufacturer email");
 
     public AutoBindingProductForm(Product product, Set<Manufacturer> manufacturers, SerializableRunnable saveListener) {
         this.saveListener = saveListener;
 
-        manufacturerComboBox.setItems(manufacturers);
-        manufacturerComboBox.setItemLabelGenerator(Manufacturer::getName);
+        manufacturer.setItems(manufacturers);
+        manufacturer.setItemLabelGenerator(Manufacturer::getName);
 
         Binder<Product> binder = new Binder<>(Product.class);
         binder.bindInstanceFields(this);
+
+        if (product.getName() == null) {
+            phoneNumber.setVisible(false);
+            email.setVisible(false);
+        } else {
+            manufacturer.setEnabled(false);
+            binder.bind(phoneNumber, "manufacturer.phoneNumber");
+            binder.bind(email,
+                    p -> p.getManufacturer().getEmail(),
+                    (p, e) -> p.getManufacturer().setEmail(e));
+        }
+
         binder.setBean(product);
     }
 
@@ -42,9 +58,11 @@ public class AutoBindingProductForm extends Composite<Component> {
     protected Component initContent() {
         return new VerticalLayout(
                 new H1("Product"),
-                nameTextField,
-                manufacturerComboBox,
-                availableCheckbox,
+                name,
+                available,
+                manufacturer,
+                phoneNumber,
+                email,
                 new Button("Save", VaadinIcon.CHECK.create(),
                         event -> saveListener.run())
         );
