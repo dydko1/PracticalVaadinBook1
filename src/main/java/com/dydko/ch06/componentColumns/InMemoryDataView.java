@@ -1,4 +1,4 @@
-package com.dydko.ch06.automaticColumns;
+package com.dydko.ch06.componentColumns;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Composite;
@@ -7,7 +7,6 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 import java.util.List;
-import java.util.Set;
 
 @Route("ch06/inMemoryData")
 public class InMemoryDataView extends Composite<Component> {

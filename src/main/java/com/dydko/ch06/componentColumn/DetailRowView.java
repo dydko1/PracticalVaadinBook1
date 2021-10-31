@@ -25,14 +25,17 @@ public class DetailRowView extends Composite<Component> {
         grid.addColumn(Book::getTitle).setHeader("Book").setAutoWidth(true).setSortable(true);
         grid.addColumn(book -> book.getPublisher().getName()).setHeader("Publisher").setSortable(true);
         grid.addColumn(Book::getAuthor).setHeader("Author").setSortable(true);
-        grid.addComponentColumn(book -> new ProgressBar(0,50,book.getQuantity())).setHeader("Quantity")
+        grid.addComponentColumn(
+                book -> new ProgressBar(0, 50, book.getQuantity())
+        ).setHeader("Quantity")
                 .setSortable(true)
-                .setComparator((b1,b2)->Integer.compare(b1.getQuantity(), b2.getQuantity()));
+                .setComparator((b1, b2) -> Integer.compare(
+                        b1.getQuantity(), b2.getQuantity()));
 
         grid.setItemDetailsRenderer(
-                new ComponentRenderer<>(book->new VerticalLayout(
-                        new Text(book.getAuthor()),
-                        new Button("Quantity", VaadinIcon.ARROW_UP.create(), e->{
+                new ComponentRenderer<>(book -> new VerticalLayout(
+                        new Text(book.getDescription()),
+                        new Button("Quantity", VaadinIcon.ARROW_UP.create(), e -> {
                             BookService.increaseQuantity(book);
                             updateGrid(grid);
                             grid.select(book);

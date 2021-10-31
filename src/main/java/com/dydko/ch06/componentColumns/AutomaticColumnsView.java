@@ -1,4 +1,4 @@
-package com.dydko.ch06.automaticColumns;
+package com.dydko.ch06.componentColumns;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Composite;

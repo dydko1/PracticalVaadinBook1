@@ -1,4 +1,4 @@
-package com.dydko.ch06.automaticColumns;
+package com.dydko.ch06.componentColumns;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -42,6 +42,7 @@ public class BookService {
         if (books == null) {
             addVaadinBooksOnly();
         }
+
         return Collections.unmodifiableList(books);
     }
 

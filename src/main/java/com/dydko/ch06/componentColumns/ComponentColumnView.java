@@ -1,4 +1,4 @@
-package com.dydko.ch06.automaticColumns;
+package com.dydko.ch06.componentColumns;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Composite;
@@ -12,7 +12,7 @@ import com.vaadin.flow.router.Route;
 import java.util.Comparator;
 import java.util.List;
 
-@Route("component-column")
+@Route("ch06/component-column2")
 public class ComponentColumnView extends Composite<Component> {
 
   @Override

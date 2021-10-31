@@ -1,4 +1,4 @@
-package com.dydko.ch06.automaticColumns;
+package com.dydko.ch06.componentColumns;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
