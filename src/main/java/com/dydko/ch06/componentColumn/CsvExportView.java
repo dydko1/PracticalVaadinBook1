@@ -24,7 +24,7 @@ import java.io.StringWriter;
 import java.util.Comparator;
 import java.util.List;
 
-@Route("chh/06csv-export")
+@Route("ch06/csv-export")
 public class CsvExportView extends Composite<Component> {
 
   @Override
